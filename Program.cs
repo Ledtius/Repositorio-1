@@ -7,19 +7,21 @@ namespace Prac2023 // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Crear humano\n");
+            Console.WriteLine("---Crear humano---\n");
             Humano humano = new Humano();
 
+            int cont = 1;
+            Console.WriteLine("Humano N°: " + cont + "\n");
             humano.GetInformacion();
 
 
             Console.WriteLine("\n¿Desea crear otro humano?");
-            string a = Console.ReadLine();
+            string valor = Console.ReadLine();
 
-            if (a == "Si")
+            if (valor == "Si")
             {
                 Console.WriteLine("\nDigite el nombre:");
- 
+
                 string nombremain = Console.ReadLine();
 
                 Console.WriteLine("\nDigite el sexo:");
@@ -28,23 +30,51 @@ namespace Prac2023 // Note: actual namespace depends on the project name.
                 Console.WriteLine("\nDigite la altura:");
                 double alturamain = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("\nDigite el pais:");
+                Console.WriteLine("\nDigite el pais:\n");
                 string paismain = Console.ReadLine();
 
+                cont++;
+                Console.WriteLine("Humano N°: " + cont + "\n");
                 Humano humano2 = new Humano(nombremain, sexomain, alturamain, paismain);
                 humano2.GetInformacion();
 
             }
-            else Console.WriteLine("\nBueno mama pito");
-
-
-            Console.WriteLine("Digite un año");
-            int year = Console.ReadLine();
-            int cont = 0;
-            if (year >= 1)
+            else if (valor == "No")
             {
-                cont++;
+                Console.WriteLine("\n Deacuerdo.");
             }
+            else
+            {
+                Console.WriteLine("Valor incorrecto.");
+            }
+
+            Console.WriteLine("Desea cambiar el nombre del humano?");
+            if ()
+            {
+
+            } else if () 
+            {
+            
+            
+            }else
+
+
+
+            //Console.WriteLine("Digite un año");
+            //int year = int.Parse(Console.ReadLine());
+            //int cont1 = 0;
+            //int century = 0;
+            //if (year > 1) 
+            //{
+            //    Console.WriteLine("incorrect value");
+            //}
+            //else if (year >= 100)
+            //{
+            //    cont++;
+            //    century = year;
+            //    Console.WriteLine("Century:" + century);
+            //}
+            //else if
         }
 
 
@@ -83,7 +113,13 @@ namespace Prac2023 // Note: actual namespace depends on the project name.
             }
 
 
-            //
+            //Metodo setter
+            public string SetNombre(string nombre)
+            {
+                this.nombre = nombre;
+                return nombre;
+            }
+            
 
 
         }
